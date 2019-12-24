@@ -6,51 +6,56 @@ use Illuminate\Http\Request;
 
 class ProductsController extends Controller
 {
-    //
+    
 
             
 public function index(){
 
 $products = \App\Product::orderBy('created_at', 'DESC')->get();
- return view('Produit', compact('products'));
+ return view('products.index', compact('products'));
 
 }
 
 public function create()
 {
-   return view('produit.create',compact('categories'));
+   $categories = \App\Category::pluck('name','id');
+   return view('products.create',compact('products'));
 }
 
 public function store(Request $request)
 {
-   $produit = new \App\Product();
-   $produit->productname = $request->input('productname');
-   $produit->quantity  = $request->input('quantity');
-   $produit->price = $request->input('price');
-   $produit->Product_benefits = $request->input('Product_benefits');
-   $produit->save();
-   return redirect('/product');
+   $product = new \App\Product();
+   $product->productname = $request->input('productname');
+   $product->quantity  = $request->input('quantity');
+   $product->price = $request->input('price');
+   $product->Product_benefits = $request->input('Product_benefits');
+   $product->save();
+   return redirect('/products')->with('success', 'products saved!');
 }
-public function edit()
+
+public function edit(Request $request, $id)
 {
-   return view('produit.create',compact('categories'));
+   $product = products::find($id);//on recupere le produit
+   return view('products.edit', compact('products'));
+}
+
+public function update(Request $request, $id){
+   $product = Product::find($id);
+   if($product){
+       $product->name = $request->input('Productname');
+       $product->Quantity = $request->input('Quantity');
+       $product->Price = $request->input('Price');
+       $product->description = $request->input('description');
+       $product->save();
+   }
+   return redirect('/products')->with('success', 'products saved!');
+}
+
+   
 }
 
 
  
 
-public function update(Request $request, $id)
-{
-   $product = \App\Product::find($id);
-   if($product){
-       $product->update([
-        'productname' = $request->input('productname'),
-        'quantity' = $request->input('quantity'),
-       'price' = $request->input('price'),
-       'description' = $request->input('Product_benefits'),
-       ]);
-   }
-   return redirect('/products');
-}
-}
+
 
