@@ -32,7 +32,6 @@ public function store(Request $request)
    $product->save();
    return redirect('/products')->with('success', 'products saved!');
 }
-
 public function edit(Request $request, $id)
 {
    $product = products::find($id);//on recupere le produit
