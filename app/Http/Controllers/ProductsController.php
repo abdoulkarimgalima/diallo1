@@ -31,7 +31,7 @@ public function store(Request $request)
 }
 public function edit(Request $request, $id)
 {
-   $product = products::find($id);//on recupere le produit
+   $products = Product::find($id);//on recupere le produit
    return view('products.edit', compact('products'));
 }
 

@@ -1,7 +1,5 @@
 @extends("layouts.app")
 @section("content")
-
-
            <form action="/products/create" method="post">
           
               @csrf
