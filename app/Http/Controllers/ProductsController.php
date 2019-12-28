@@ -16,7 +16,7 @@ $products = \App\Product::orderBy('created_at', 'DESC')->get();
 
 public function create()
 {
-   return view('produit.create',compact('categories'));
+   return view('produit.create',compact('products'));
 }
 
 public function store(Request $request)
@@ -51,9 +51,5 @@ public function update(Request $request, $id)
    return redirect('/products');
 }
 
-public function store(Request $request)
-{
 
-   
-}
 
