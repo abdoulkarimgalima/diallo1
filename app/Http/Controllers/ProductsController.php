@@ -5,10 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 class ProductsController extends Controller
-{
-    
 
-            
+{
+                
 public function index(){
 
 $products = \App\Product::orderBy('created_at', 'DESC')->get();
@@ -32,6 +31,8 @@ public function store(Request $request)
    $product->save();
    return redirect('/products')->with('success', 'products saved!');
 }
+
+
 public function edit(Request $request, $id)
 {
    $product = products::find($id);//on recupere le produit
