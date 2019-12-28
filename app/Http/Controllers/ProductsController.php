@@ -6,8 +6,6 @@ use Illuminate\Http\Request;
 
 class ProductsController extends Controller
 {
-    
-
             
 public function index(){
 
@@ -18,8 +16,7 @@ $products = \App\Product::orderBy('created_at', 'DESC')->get();
 
 public function create()
 {
-   $categories = \App\Category::pluck('name','id');
-   return view('products.create',compact('products'));
+   return view('produit.create',compact('products'));
 }
 
 public function store(Request $request)
@@ -54,7 +51,7 @@ public function update(Request $request, $id){
 }
 
 
- 
+
 
 
 
