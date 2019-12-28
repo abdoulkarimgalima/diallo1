@@ -6,8 +6,6 @@ use Illuminate\Http\Request;
 
 class ProductsController extends Controller
 {
-    //
-
             
 public function index(){
 
@@ -52,5 +50,10 @@ public function update(Request $request, $id)
    }
    return redirect('/products');
 }
+
+public function store(Request $request)
+{
+
+   
 }
 
