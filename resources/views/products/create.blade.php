@@ -2,10 +2,8 @@
 @section("content")
 
 
-         /*** <form action="/products/create" method="post">
-         */  
-           <form action="{{route('product.store')}}" method="post" enctype="multipart/form-data">
           
+       <form action="/products/create" method="post">
               @csrf
 
                <h5> AJOUTER VOTRE PRODUIT</h5>
@@ -25,9 +23,6 @@
                <div>
                    <button class="btn btn-primary">Enregistrer</button>
                </div>
-               <div>
-                   <input type="file" name="product_image" class="form-control">
-            </div>
 
            </form>
 

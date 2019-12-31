@@ -2,27 +2,21 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
+use App\Product;
 
 class ProductsController extends Controller
-<<<<<<< HEAD
 
 {
-                
-=======
-{
+   
+   public function index(){
+      $products = Product::orderBy('created_at')->get();
+      return view('products.index', compact('products'));
+   }
             
->>>>>>> 7da3aed49320a707c0c6ccd36dfef5d908be6937
-public function index(){
-
-$products = \App\Product::orderBy('created_at', 'DESC')->get();
- return view('products.index', compact('products'));
-
-}
-
-public function create()
-{
-   return view('produit.create',compact('products'));
+public function create(){
+   return view('products.create',compact('varieties'));
 }
 
 public function store(Request $request)
@@ -35,11 +29,9 @@ public function store(Request $request)
    $product->save();
    return redirect('/products')->with('success', 'products saved!');
 }
-
-
 public function edit(Request $request, $id)
 {
-   $products = Product::find($id);//on recupere le produit
+   $product = Product::find($id);//on recupere le produit
    return view('products.edit', compact('products'));
 }
 
@@ -57,6 +49,7 @@ public function update(Request $request, $id){
 
    
 }
+
 
 
 
