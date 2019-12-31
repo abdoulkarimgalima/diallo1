@@ -1,6 +1,10 @@
 @extends("layouts.app")
 @section("content")
-           <form action="/products/create" method="post">
+
+
+         /*** <form action="/products/create" method="post">
+         */  
+           <form action="{{route('product.store')}}" method="post" enctype="multipart/form-data">
           
               @csrf
 
@@ -21,6 +25,10 @@
                <div>
                    <button class="btn btn-primary">Enregistrer</button>
                </div>
+               <div>
+                   <input type="file" name="product_image" class="form-control">
+            </div>
+
            </form>
 
            @endsection
