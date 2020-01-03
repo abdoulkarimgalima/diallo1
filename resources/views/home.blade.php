@@ -2,7 +2,7 @@
 @extends("layouts.app")
 @section("content")
  <div class="container">
-   <h1>je suis la page des categories </h1>
+   <h1> votre loumo a domicile </h1>
  </div>
 
   <!-- Page Content --><header>
@@ -16,11 +16,24 @@
 
         <h1 class="my-4">Loumo Digital </h1>
         <div class="list-group">
-          <a href="#" class="list-group-item">commande</a>
-          <a href="#" class="list-group-item">commande niebe</a>
-          <a href="#" class="list-group-item">commande mais</a>
-          <a href="#" class="list-group-item">commande produits</a>
-          <a href="#" class="list-group-item">commande semences</a>
+    
+          <a href="#" class="list-group-item">CLIENT ICI</a>
+          <a href="#" class="list-group-item">Achetez Produit</a>
+
+          <ul class="nav nav-tabs">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">INSCRIPTION</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Inscription client</a>
+                  <a class="dropdown-item" href="#">connexion client</a>
+                  <a class="dropdown-item" href="#">inscription commercant</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Connexion commercant</a>
+                </div>
+            </li>
+          </ul>
+          <a href="#" class="list-group-item">COMMERCANT ICI</a>
+          <a href="{{url('products/create')}}" class="list-group-item">Ajouter Produit</a>
         
         </div>
 

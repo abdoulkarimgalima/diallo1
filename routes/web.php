@@ -89,3 +89,10 @@ Route::get('/products/create', function () {
 });
 
 Route::get("/kara","KaraController@index");
+
+
+Route::get('/products/inscription', function () {
+
+    return view('products/inscription');
+
+});

@@ -16,7 +16,7 @@ class ProductsController extends Controller
    }
             
 public function create(){
-   return view('products.create',compact('varieties'));
+   return view('products.create',compact('products'));
 }
 
 public function store(Request $request)
