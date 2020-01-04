@@ -1,10 +1,10 @@
 @extends("layouts.app")
 @section("content")
 
+<form action="{{route('product.store')}}" method="post" enctype="multipart/form-data">
 
-<form method="post" action="/products/create">   
-      
               @csrf
+              <div><input type="file" name="product_image" class="form-control"></div>
 
                <h5> AJOUTER VOTRE PRODUIT</h5>
  
@@ -14,6 +14,12 @@
        <input type="text" name="productname" id="productname" />
 
        <br>
+
+       <label for="productimage">Quel est le nom de votre produit </label>
+       <input type="text" name="productname" id="productname" />
+
+       <br>
+
 
        <label for="quantite">Quelle est la quantite du produit </label>
        <input type="number" name="quantity" id="quantity" />
