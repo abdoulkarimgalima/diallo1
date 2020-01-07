@@ -1,13 +1,12 @@
-@extends("layouts.app")
-@section("content")
+@extends("layouts.front")
+@section("contenu")
 
-<form action="{{route('product.store')}}" method="post" enctype="multipart/form-data">
+<form action="{{route('store_products')}}" method="post" enctype="multipart/form-data">
 
               @csrf
-              <div><input type="file" name="product_image" class="form-control"></div>
 
-               <h5> AJOUTER VOTRE PRODUIT</h5>
- 
+              <h5> AJOUTER VOTRE PRODUIT</h5>
+
    <fieldset>
 
        <label for="productname">Quel est le nom de votre produit </label>
@@ -15,9 +14,9 @@
 
        <br>
 
-       <label for="productimage">Quel est le nom de votre produit </label>
-       <input type="text" name="productname" id="productname" />
-
+       <label for="productimage">Quel est l image du produit </label>
+       <!--input type="text" name="productname" id="productname" /-->
+       <input type="file" name="product_image" class="form-control">
        <br>
 
 
@@ -31,7 +30,7 @@
        <div>
              <textarea name="Product_benefits" id="description" cols="30" rows="10" class="form-control" placeholder="avantages du produit"></textarea>
                </div>
-               <br>
+               <br>   
                <div>
                    <button class="btn btn-primary">Enregistrer</button>
                </div>

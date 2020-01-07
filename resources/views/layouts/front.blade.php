@@ -14,6 +14,7 @@
   <!-- Bootstrap core CSS -->
   <link href="{{asset('css/app.css')}}" rel="stylesheet">
   <link href="{{asset('css/all.css')}}" rel="stylesheet">
+  
 
   <!-- Custom styles for this template 
   <link href="css/shop-homepage.css" rel="stylesheet">-->
@@ -34,10 +35,10 @@
     <a class="nav-link active" href="#">ACCEUIL</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">NOS PRODUITS</a>
+    <a class="nav-link" href="{{route('products')}}">NOS PRODUITS</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">CONTACT</a>
+    <a class="nav-link" href="/">CONTACT</a>
   </li>
   <li class="nav-item">
     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
@@ -47,7 +48,6 @@
 </nav>
     </div>
   </nav>
-
   <!-- Page Content -->
   <div class="container">
     <div class="row">
@@ -55,7 +55,7 @@
         <h1 class="my-4">Loumo Digital </h1>
         <div class="list-group">
           <a href="#" class="list-group-item">COMMERCANT</a>
-          <a href="#" class="list-group-item">AJOUTEZ PRODUIT</a>
+          <a href="products.create" class="list-group-item">AJOUTEZ PRODUIT</a>
           <H2>DLOUMO</H2>
           <a href="#" class="list-group-item">CLIENTS</a>
           <a href="#" class="list-group-item">ACHETEZ PRODUIT</a>
@@ -72,7 +72,7 @@
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Loumo Digital 2019</p>
+      <p class="m-0 text-center text-white">Copyright &copy; KARIM Loumo Digital 2019</p>
     </div>
     <!-- /.container -->
   </footer>

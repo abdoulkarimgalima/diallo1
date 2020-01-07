@@ -1,7 +1,6 @@
 @extends("layouts.app")
 @section("content")
 
-
 <form method="post" action="">
  
    <fieldset>

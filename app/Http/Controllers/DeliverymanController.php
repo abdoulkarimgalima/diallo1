@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class DeliverymanController extends Controller
 {
-    //
+
     public function index()
     {
         $deliveryman = Deliveryman::orderBy('created_at')->get();

@@ -9,7 +9,7 @@
             <th>image produit</th> 
             <th>Prix Produit</th>  
             <th>Quantite</th>
-            ,     
+                
             <th></th>
         </tr>
         @foreach($products as $product)
@@ -19,7 +19,7 @@
                 <th>{{$product->Productimage }}</th>
                 <th>{{$product->Quantity}}</th>
                 <th>{{$product->Price }} {{ $product->quantity->name ?? ''}}</th>
-                <th><p><a href="{{route('editer_produit',['id'=>$product->id])}}">Editer</a></p></th>
+                <th><p><a href="{{route('editer_product',['id'=>$product->id])}}">Editer</a></p></th>
            </tr>
         @endforeach   
    </table>

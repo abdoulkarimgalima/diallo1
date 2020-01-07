@@ -6,13 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
+  public function products(){
 
+    return $this->hasMany("App\Product");
 
-  protected $product = [
-        'Quantity',
-        'Price',
-     'Product_benefits'
-
-    ] ; 
+    }
+    
 }
+
+
+
+
 
