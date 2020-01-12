@@ -16,7 +16,10 @@ class ProductsController extends Controller
    }
             
 public function create(){
-   return view('products.create');
+
+
+   $categories = \App\Category::pluck('name','id');
+   return view('products.create', compact('categories'));
 }
 
 public function store(Request $request)

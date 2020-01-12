@@ -1,5 +1,5 @@
 @extends("layouts.app")
-@section("content")
+@section("contenu")
 <form action="{{route('update_product',['id'=>$product->id])}}" method="post" enctype="multipart/form-data">
 
 @csrf

@@ -1,5 +1,5 @@
 @extends("layouts.app")
-@section("content")
+@section("contenu")
 
 <form method="post" action="">
  
