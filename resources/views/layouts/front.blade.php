@@ -32,13 +32,13 @@
       </button>
       <ul class="nav nav-pills nav-fill">
   <li class="nav-item">
-    <a class="nav-link active" href="#">ACCEUIL</a>
+    <a class="nav-link active" href="/">ACCEUIL</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="{{route('products')}}">NOS PRODUITS</a>
+    <a class="nav-link" href="{{route('mission')}}">MISSION</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="/">CONTACT</a>
+    <a class="nav-link" href="{{route('contact')}}">CONTACT</a>
   </li>
   <li class="nav-item">
     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">AK SUNU LOUMO DIAYMI YOKKOU</a>
@@ -54,11 +54,11 @@
       <div class="col-lg-3">
         <h1 class="my-4">Loumo Digital </h1>
         <div class="list-group">
-          <a href="#" class="list-group-item">COMMERCANT</a>
-          <a href="products.create" class="list-group-item">AJOUTEZ PRODUIT</a>
-          <H2>DLOUMO</H2>
-          <a href="#" class="list-group-item">CLIENTS</a>
-          <a href="#" class="list-group-item">ACHETEZ PRODUIT</a>
+          <a href="#" class="list-group-item">cereales a paille </a>
+          <a href="#" class="list-group-item">legumes </a>
+          <a href="#" class="list-group-item">lugumineuse alimentaires</a>
+          <H2>NOS CATEGORIES </H2>
+          <a href="#" class="list-group-item"></a>
         </div>
       </div>
         <!-- /.col-lg-3 -->
@@ -72,7 +72,7 @@
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; KARIM Loumo Digital 2019</p>
+      <p class="m-0 text-center text-white">Copyright &copy;  Loumo Digital 2019</p>
     </div>
     <!-- /.container -->
   </footer>

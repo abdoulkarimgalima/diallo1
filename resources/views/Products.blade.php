@@ -1,4 +1,7 @@
 
+@extends('layouts.front')
+
+@section('contenu')
 <table class="table table-striped">
        <tr>
            <th>#</th>  
@@ -23,5 +26,6 @@
    </tr>
 @endforeach
    </table>
+   @endsection
    
 

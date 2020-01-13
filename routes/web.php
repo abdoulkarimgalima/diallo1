@@ -21,6 +21,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home/contact', 'HomeController@contact')->name('contact');
+Route::get('/home/mission', 'HomeController@mission')->name('mission');
 Route::get("/", "HomeController@index");
 
 
@@ -34,3 +36,5 @@ Route::patch('products/{id}/edit', 'ProductsController@update')->name('update_pr
 Route::get('/products','ProductsController@index')->name('products');
 Route::get('/products/create','ProductsController@create')->name('products_create');
 Route::post('/products/store','ProductsController@store')->name('store_products');
+
+Route::post('/ajout_category', 'AjaxController@ajout_category');
